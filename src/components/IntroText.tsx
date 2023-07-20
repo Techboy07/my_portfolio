@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 
 
-const IntroText = ({temp,styles})=>{
+const IntroText = ({temp,styles}:{temp:string;styles:string;})=>{
 
 const [text, setText] = useState("");
 
@@ -23,7 +23,7 @@ const myInterval = setInterval(()=>{
 
 return(
 <>
- <h1 className={styles}>{text}</h1>
+ <h1 className={`${styles} text-3xl font-medium text-center text-tetiary`}>{text}</h1>
 </>
 )
 

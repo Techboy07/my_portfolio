@@ -1,9 +1,9 @@
-const OscillatingIcon = ({icon})=>{
+const OscillatingIcon = ({icon,styles}:{icon:string; styles:string})=>{
 
 
 return(
 <>
-<div className="p-2 text-2xl animate-bounce">
+<div className={`${styles} p-2 text-2xl animate-bounce`}>
 <i className={icon}></i>
 </div>
 </>

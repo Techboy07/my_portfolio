@@ -1,23 +1,21 @@
-import { useState } from 'react';
-
 import './App.css';
+import WelcomePage from './pages/WelcomePage';
 
-import IntroText from './components/IntroText'
-import OutlinedButton from './components/OutlinedButton'
-import OscillatingIcon from './components/OscillatingIcon'
 
-function App() {
+const App = () => {
 
   return (
-<>
-<IntroText  temp="Hi my name is Toluwalase. i'm a react developer!" styles="text-blue-900 font-bold text-2xl"/>
+    <>
+      <div className={""}>
 
-<OutlinedButton buttonText="view my work" styles="p-3"/>
+        <WelcomePage/>
 
-<OscillatingIcon icon="bx bx-down-arrow-alt"/>
- </> )
 
-  
+
+      </div>
+    </> 
+  )
+
 }
 
 export default App;
