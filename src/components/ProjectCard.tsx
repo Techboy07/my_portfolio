@@ -2,36 +2,52 @@ import OutlinedButton from "./OutlinedButton"
 
 import Paragraph from "./Paragraph"
 
-const ProjectCard = ({projectName,description,imageLink}:{projectName:string;imageLink:string;description:string})=>{
+import { useRef,useEffect } from "react";
+
+import createObeserver from "../../observer";
 
 
+const ProjectCard = ({projectName,description,imageLink
+,sourceCode,livePage}:{projectName:string;imageLink:string;description:string;livePage:string;sourceCode:string})=>{
 
-  return(
-    <>
-      <div className={"card-body"}>
-      <div className={"pb-5"}>
-        <h1 className={"font-medium text-xl  text-left"}>{projectName}</h1>
+const details = useRef<Element>(null)
+const image = useRef<Element>(null)
+
+useEffect(()=>{
+createObeserver(details.current,"visible-backwards-short",true)
+
+createObeserver(image.current,"visible-short",true)
+
+},[])
+
+return(
+  <>
+    <div className={"card-body"}>
+      <div ref={details} className="not-visible">
+        <div className={"pb-5 text-gray-700"}>
+          <h1 className={"font-medium text-2xl text-left"}>{projectName}</h1>
+
+        </div>
+
+        <div className={"pb-5"}>
+
+          <Paragraph paragraphText={description}/>
+        </div>
+
+        <div className={"pb-10 flex items-center "}>
+          <a href={livePage}><OutlinedButton buttonText="See live" styles="text-xs px-10 py-2 font-normal"/>
+          </a>          <a href={sourceCode}><button className={"ml-5 font-light "}>Source Code</button></a>
+        </div>
       </div>
 
-      <div className={"pb-5"}>
-        
-        <Paragraph paragraphText={description}/>
-      </div>
-
-      <div className={"pb-5 flex "}>
-        <OutlinedButton buttonText="See live" styles="px-8 py-1 font-light"/>
-
-        <button className={"ml-5 uppercase font-light "}>source code</button>
-      </div>
-
-      <div>
+      <div ref={image} className="not-visible rounded-md shadow-2xl shadow-gray-700">
         <img src={imageLink} alt="card image" className={"rounded-md w-full"}/>
       </div>
 
-        </div>
-    </>
+    </div>
+  </>
 
-  )
+)
 
 }
 

@@ -1,0 +1,65 @@
+body{
+
+color: #374151;
+}
+.not-visible{
+  opacity: 0;
+}
+
+.visible{
+  animation: slide 1s ease-in forwards;
+}
+
+.visible-short{
+  animation: slide 0.5s ease-in forwards;
+}
+
+.visible-backwards-short{
+  animation: slide-back 0.5s ease-in forwards;
+}
+.visible-backwards{
+animation: slide-back 1s ease-in forwards; }
+
+
+
+
+
+@media (min-width: 1024px){
+
+
+.aspect-1{
+
+aspect-ratio: 0.85;
+
+}
+
+
+}
+
+
+
+@keyframes slide{
+  from{
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to{
+
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes slide-back{
+  from{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to{
+
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}

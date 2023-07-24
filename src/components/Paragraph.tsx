@@ -1,6 +1,17 @@
+const Paragraph = ({paragraphText,color}:{paragraphText:string;color:string}) => 
+  { 
+  //const [visible, setVisible]= useState("")
+  //  const [isIntersecting, setIsIntersecting] = useState(false)
+
+  
 
 
-const Paragraph = ({paragraphText,color}:{paragraphText:string;color:string})=><p className={`${color} font-light`}>{paragraphText}</p>
+  return (
+    <p className={`${color} lg:font-normal lg:text-lg font-light`}>
+      {paragraphText}
+    </p>
+  )
+}
 
 
 

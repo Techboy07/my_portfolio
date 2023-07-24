@@ -23,7 +23,7 @@ const myInterval = setInterval(()=>{
 
 return(
 <>
- <h1 className={`${styles} text-3xl font-medium text-center text-tetiary`}>{text}</h1>
+  <h1 className={`${styles} text-3xl lg:text-6xl font-medium text-center text-tetiary`}>{text}</h1>
 </>
 )
 
