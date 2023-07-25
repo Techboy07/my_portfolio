@@ -32,7 +32,7 @@ const [projects, setProjects] = useState<project[]>([])
   return(
 
     <>
-      <section className="px-5">
+      <section className="px-5 lg:px-24">
         <div className="pt-24 pb-16">
           <HeadingText headingText={"projects"}/>
         </div>

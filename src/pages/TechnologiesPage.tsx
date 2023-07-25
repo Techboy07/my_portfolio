@@ -35,7 +35,7 @@ for (const elem of observedElements) {
 
   return(
    <>
-<section className={"px-5 container mx-auto"}>
+     <section className={"px-5 lg:px-24 container mx-auto"}>
 <div className={"pt-24 pb-16"}>
             <HeadingText headingText={"technologies i use"
   }/>
@@ -48,7 +48,7 @@ for (const elem of observedElements) {
 
   <Paragraph paragraphText={"Until recently, creating dynamic websites with tools like Wordpress was common practice. Compared to modern technologies though, today this approach seems inflexible and clunky, especially regarding the performance of the resulting website."} color={"mb-3 lg:mb-8"}/>
 
-  <p className={"font-light mb-3 lg:mb-8 lg:text-lg font-normal"} >
+  <p className={"font-light mb-3 lg:mb-8 lg:text-lg lg:font-normal"} >
     Javascript libraries like <span className={"font-medium lg:text-semibold"}>React</span> and modern Static Site Generators like <span className={"font-medium lg:text-semibold"}>Nextjs </span> allow for the creation of static assets (or server side rendering) with all the possibilities dynamic web applications have to offer. So you'll get the best of both worlds. That entails a range of advantages, especially regarding the performance, the flexibility, the security, the scalability and the costs of the resulting website. All while content creators - through the integration of a Headless CMS like <span className={"font-medium lg:text-semibold"}>Contentul</span>- have the possibility, to flexibly adjust all of the content based on their requirements.
 </p>
 

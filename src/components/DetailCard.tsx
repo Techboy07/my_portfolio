@@ -12,9 +12,9 @@ const DetailCard = ({imageLink,detailText,detailHeader}:{imageLink:string;detail
 return(
   <>
     <div className="lg:flex lg:gap-5">
-      <div className={'w-20 mb-3 lg:basis-2/5'}>
+      <div className={'mb-3 lg:flex lg:justify-center lg:basis-1/5'}>
   
-        <img className="lg:h-3/5" src={imageLink} alt="detail-image"/>
+        <img className="w-20" src={imageLink} alt="detail-image"/>
 </div>
       <div className="">
 <div className={"mb-3"}>

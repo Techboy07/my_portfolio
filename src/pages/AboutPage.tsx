@@ -20,21 +20,25 @@ const AboutPage = ()=>{
 
  useEffect(()=>{
 
-   const observedElements = [image.current, ...paragraphs.current?.children]
+   const observedElements = [image.current]
+
+   for(let i = 0; i < paragraphs.current?.children.length; i++){
+
+observedElements.push(paragraphs.current?.children[i])
+
+   }
 
 
-
-   observedElements.forEach(elem => {
-     elem.classList.add("not-visible")
-
-createObeserver(elem)  
+     observedElements.forEach(elem => {
+       elem.classList.add("not-visible")
+     createObeserver(elem)  
    })
  },[])
 
   return (
 
     <>
-      <section className={"px-5 bg-sky-700 text-white"}>
+      <section className={"px-5 bg-sky-700 text-white lg:px-24"}>
         <div className="container mx-auto">                          
         <div className={"pt-24 pb-16"}>
           <HeadingText headingText={"about me"}/>
@@ -50,15 +54,15 @@ createObeserver(elem)
 </div>
               </div>
 
-            <div ref={paragraphs} className={"pb-16 lg:basis-1/2 lg:pl-7"}>
-              <Paragraph paragraphText={"I am a React and Node Developer mainly working with React and its accompanying tools to build highly interactive web applications."} color={"mb-3  lg:mb-8  "}/>
+            <div ref={paragraphs} className={"pb-16 lg:basis-1/2 lg:pl-3"}>
+              <Paragraph paragraphText={"I am a React and Node Developer mainly working with React and its accompanying tools to build highly interactive web applications."} color={"mb-3  lg:mb-5  "}/>
 
 
-              <Paragraph paragraphText={"Being a huge fan of the MERNStack, I am able to accompany a design with React to a single page or multipage application which improves reactivity,performance and maintainability of projects."} color={"mb-3  lg:mb-8"}/>
+              <Paragraph paragraphText={"Being a huge fan of the MERNStack, I am able to accompany a design with React to a single page or multipage application which improves reactivity,performance and maintainability of projects."} color={"mb-3  lg:mb-5"}/>
 
 
 
-              <Paragraph paragraphText={"Although I enjoy working mainly with React for the frontend I do have experience working with backend technologies and services such as Node, Express and Firebase to build full stack applications."} color={"mb-3 lg:mb-8"} />
+              <Paragraph paragraphText={"Although I enjoy working mainly with React for the frontend I do have experience working with backend technologies and services such as Node, Express and Firebase to build full stack applications."} color={"mb-3 lg:mb-5"} />
 
 
 

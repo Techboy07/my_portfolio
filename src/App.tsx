@@ -8,10 +8,12 @@ import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
 
 import ProjectPage from './pages/ProjectsPage';
-const App = () => {
+
+/*iimport { BrowserRouter,Routes,Route } from '../node_modules/react-router-dom/dist/index';
+ */const App = () => {
   return (
     <>
-      <div className={""}>
+      <main className={""}>
 
         <WelcomePage/>
 
@@ -25,7 +27,7 @@ const App = () => {
         <ContactPage/>
 
         <Footer/>
-      </div>
+      </main>
     </> 
   )
 

@@ -1,24 +1,29 @@
-body{
 
+
+body{
+font-family: 'Raleway', sans-serif;
 color: #374151;
 }
 .not-visible{
-  opacity: 0;
+transform: translateY(100px);
+ opacity: 0;
 }
 
 .visible{
-  animation: slide 1s ease-in forwards;
+
+animation: slide 0.8s ease-in-out forwards;
+
 }
 
 .visible-short{
-  animation: slide 0.5s ease-in forwards;
+  animation: slide 0.5s ease-in-out forwards;
 }
 
 .visible-backwards-short{
-  animation: slide-back 0.5s ease-in forwards;
+  animation: slide-back 0.5s ease-in-out forwards;
 }
 .visible-backwards{
-animation: slide-back 1s ease-in forwards; }
+animation: slide-back 1s ease-in-out forwards; }
 
 
 
@@ -40,7 +45,7 @@ aspect-ratio: 0.85;
 
 @keyframes slide{
   from{
-    transform: translateY(50px);
+    transform: translateY(100px);
     opacity: 0;
   }
   to{

@@ -13,7 +13,7 @@ const ContactPage = ()=>{
 
   return(
     <>
-      <section className="px-5 pb-16 bg-sky-700 text-white">
+      <section className="px-5 lg:px-24 pb-16 bg-sky-700 text-white">
         <div className="pb-16 pt-24">
           <HeadingText headingText={"contact"}/>
         </div>

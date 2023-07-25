@@ -52,7 +52,9 @@ const DetailPage = ()=>{
   return(
 
     <>
-      <section className={"px-5 bg-sky-700 text-white"}>
+      <section className={"px-5 lg:px-24 bg-sky-700 text-white"}>
+
+        <div className="container mx-auto">
         <div className="pt-24 pb-16">
           <HeadingText headingText={"details"}/>
 
@@ -70,6 +72,7 @@ const DetailPage = ()=>{
           </div>)}
 
         </div>
+</div>
 
       </section>
 

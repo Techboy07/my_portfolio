@@ -1,5 +1,5 @@
 
-function createObeserver(target:Element, classType="visible", full=false){
+function createObeserver(target:Element, classType="visible-backwards", full=false){
 
     const observer = new IntersectionObserver(([entry])=>{
 

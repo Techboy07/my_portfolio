@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react'
 
 
-const IntroText = ({temp,styles}:{temp:string;styles:string;})=>{
+const IntroText = ({temp,styles,setVisible}:{temp:string;styles:string;setVisible:Function})=>{
 
 const [text, setText] = useState("");
+
 
 useEffect(()=>{
 let i = 0;
@@ -15,15 +16,17 @@ const myInterval = setInterval(()=>{
  setText(str)
  i++
  } else{
+   setVisible(true)
  clearInterval(myInterval)
  }
  },100)
+ 
 
 },[])
 
 return(
 <>
-  <h1 className={`${styles} text-3xl lg:text-6xl font-medium text-center text-tetiary`}>{text}</h1>
+  <h1 className={`${styles} text-3xl lg:text-6xl font-semibold text-center text-tetiary`}>{text}</h1>
 </>
 )
 
