@@ -1,7 +1,7 @@
 import { useState , useEffect, useRef} from "react";
 
 import createObeserver from "../../observer";
-import { getItems } from "../../firebase";
+import { getItems } from "../../firebase.config";
 import Paragraph from "../components/Paragraph";
 
 import HeadingText from "../components/HeadingText"
@@ -12,23 +12,26 @@ const TechnologiesPage = ()=>{
 
   const [technologies, setTechnologies] = useState<string[]>([""])
 
-  const paragraphs = useRef<Element>(null)
+  const paragraphs = useRef<HTMLDivElement>(null)
+
+
+
 
 
   useEffect(()=>{
 
-    getItems("Technologies").then(res => {
-      const techs:string[] = res[0].technologies
+    getItems("Technologies").then((res) => {
+      const techs = res[0].technologies
       setTechnologies(techs)
     } )
     const observedElements = paragraphs.current?.children
-
+    if(observedElements){
 for (const elem of observedElements) {
   elem.classList.add("not-visible")
   createObeserver(elem)
 }
 
-    
+    }
   },[])
 
 

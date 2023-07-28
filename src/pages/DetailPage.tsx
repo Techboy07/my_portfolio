@@ -6,7 +6,7 @@ import DetailCard from "../components/DetailCard";
 
 
 interface detail{
-  imageLink:string;i
+  imageLink:string;
   detailHeader: string;
   detailText: string;
 }

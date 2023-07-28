@@ -8,8 +8,11 @@ const Footer = ()=> <footer className="bg-gray-800 flex flex-col justify-center 
 
 
   <div className="flex justify-center gap-16 pb-10">
-    <div><i className="bx bxl-github text-4xl"></i></div>
+    <a href="https://github.com/Techboy07"> <div><i className="bx bxl-github text-4xl"></i></div>
+</a>
+    <a href="https://www.linkedin.com/in/tolu-temi-557775162?trk=contact-info">
     <div><i className="bx bxl-linkedin text-4xl"></i></div>
+      </a>
   </div>
 
   <div className="border-0 border-b border-white mb-16"></div>

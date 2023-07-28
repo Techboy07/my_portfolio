@@ -29,18 +29,21 @@ setVisibilityClass("visible")
 
 
           <div className={`${visibilityClass} flex justify-center gap-x-2`}>
-          <div>
+          <div><a href="#projects">
               <OutlinedButton buttonText={"view my work"}
-                styles={"px-8 text-xs py-3 mr-2"}/>
+                styles={"px-8 text-xs py-3 mr-2"}/></a>
             </div>
 
-            <div>
+            <div><a href="#contact">
               <OutlinedButton buttonText={"contact me"} styles={"px-8 text-xs py-3"}/>
+              </a>
             </div>
           </div>
-i
+
   <div className={"absolute bottom-0 w-full lg:w-4/5 "}>
+    <a href="#about">
   <OscillatingIcon icon={"bx bxs-chevrons-down"} styles={"text-4xl text-center"}/>
+      </a>
  </div>
         </div>
       </section>

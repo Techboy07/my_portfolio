@@ -1,4 +1,4 @@
-import { useRef,useEffect } from "react"
+import { useRef,useEffect} from "react"
 
 import createObeserver from "../../observer"
 
@@ -12,33 +12,30 @@ import Paragraph from "../components/Paragraph"
 
 const AboutPage = ()=>{
 
-  const image = useRef<Element>(null)
-  const paragraphs = useRef<Element>(null)
+  const image = useRef<HTMLDivElement>(null)
+  const paragraphs = useRef<HTMLDivElement>(null)
 
  
 
 
  useEffect(()=>{
+   if(paragraphs.current && image.current){
 
-   const observedElements = [image.current]
-
-   for(let i = 0; i < paragraphs.current?.children.length; i++){
-
-observedElements.push(paragraphs.current?.children[i])
-
-   }
+   const observedElements = [image.current,...paragraphs.current.children]
 
 
-     observedElements.forEach(elem => {
+   
+
+   observedElements.forEach(elem => {
        elem.classList.add("not-visible")
      createObeserver(elem)  
-   })
+   })}
  },[])
 
   return (
 
     <>
-      <section className={"px-5 bg-sky-700 text-white lg:px-24"}>
+      <section  id="about" className={"px-5 bg-sky-700 text-white lg:px-24"}>
         <div className="container mx-auto">                          
         <div className={"pt-24 pb-16"}>
           <HeadingText headingText={"about me"}/>

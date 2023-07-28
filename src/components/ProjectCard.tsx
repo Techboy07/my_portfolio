@@ -10,14 +10,16 @@ import createObeserver from "../../observer";
 const ProjectCard = ({projectName,description,imageLink
 ,sourceCode,livePage}:{projectName:string;imageLink:string;description:string;livePage:string;sourceCode:string})=>{
 
-const details = useRef<Element>(null)
-const image = useRef<Element>(null)
+const details = useRef<HTMLDivElement>(null)
+const image = useRef<HTMLDivElement>(null)
 
 useEffect(()=>{
+  if(details.current){
 createObeserver(details.current,"visible-backwards-short",true)
-
+  }
+  if(image.current){
 createObeserver(image.current,"visible-short",true)
-
+  }
 },[])
 
 return(
@@ -25,13 +27,13 @@ return(
     <div className={"card-body lg:flex"}>
       <div ref={details} className="basis-1/2 not-visible">
         <div className={"pb-5 text-gray-700"}>
-          <h1 className={"font-medium text-2xl text-left"}>{projectName}</h1>
+          <h1 className={"font-medium capitalize text-2xl text-left"}>{projectName}</h1>
 
         </div>
 
-        <div className={"pb-5"}>
+        <div className={"pb-5 break-word"}>
 
-          <Paragraph paragraphText={description}/>
+          <Paragraph paragraphText={description} color={""}/>
         </div>
 
         <div className={"pb-10 flex items-center "}>

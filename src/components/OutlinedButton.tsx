@@ -1,4 +1,4 @@
-const OutlinedButton = ({buttonText,styles})=>{
+const OutlinedButton = ({buttonText,styles}:{buttonText:string;styles:string})=>{
 
 return(
 <>
