@@ -77,7 +77,7 @@ return(
         <HeadingText headingText={"contact"}/>
       </div>
 
-      <div className="">
+      <div className="container mx-auto">
 
         <Paragraph paragraphText={"Have an idea for a web or mobile application ? Need a professional website or online store for your business?"} color={"mb-3"}/>
 
@@ -86,7 +86,7 @@ return(
         <Paragraph paragraphText={"Tel:09076673849 08118503070"} color={"mb-3"}/>
         <Paragraph paragraphText={"OR"} color={"mb-3"}/>
         <Paragraph paragraphText={"Email:technogodwr@gmail.com"} color={"mb-3"}/>
-      </div>
+      
 
       <form ref={contactForm} onSubmit={formSubmit}>
         <label htmlFor="name">Full Name</label>
@@ -100,9 +100,9 @@ return(
         <label htmlFor="message">Message</label>
         <input ref={messageInput} type="text" id="message" className={"w-full h-32 bg-transparent border border-white rounded mb-3 outline-0 p-2"} onChange={(e:ChangeEvent<HTMLInputElement>)=>setTextMessage(e.target.value)} value={textMessage}/>
 
-        <input type="Submit" className="rounded p-3 border border-white text-white bg-transparent outline-0 hover:bg-white hover:text-sky-700 focus:bg-white focus:text-sky-900" value={"Submit"}/>
+        <input type="Submit" className="rounded p-3 border border-white text-white bg-transparent outline-0 hover:bg-white hover:text-sky-700 focus:bg-white focus:text-sky-900" value={"Submit"} readOnly/>
       </form>
-
+</div>
     </section>
 
   </>

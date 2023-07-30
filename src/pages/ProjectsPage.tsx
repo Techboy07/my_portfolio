@@ -31,7 +31,7 @@ const ProjectPage = ()=>{
     return(
 
       <>
-        <section id="projects" className="px-5 lg:px-24">
+        <section id="projects" className="px-5 lg:px-24 container mx-auto">
           <div className="pt-24 pb-16">
             <HeadingText headingText={"projects"}/>
           </div>

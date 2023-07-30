@@ -31,14 +31,14 @@ return(
 
         </div>
 
-        <div className={"pb-5 break-word"}>
+        <div className={"pb-5 break-word lg:pr-16"}>
 
           <Paragraph paragraphText={description} color={""}/>
         </div>
 
         <div className={"pb-10 flex items-center "}>
-          <a href={livePage}><OutlinedButton buttonText="See live" styles="text-xs px-10 py-2 font-normal"/>
-          </a>          <a href={sourceCode}><button className={"ml-5 font-light i"}>Source Code</button></a>
+          { livePage != "" && <a href={livePage}><OutlinedButton buttonText="See live" styles="text-xs px-10 py-2 font-normal"/>
+          </a> }       { sourceCode!="" && <a target="blank" href={sourceCode}><button className={"ml-5 font-light i"}>Source Code</button></a>}
         </div>
       </div>
 
