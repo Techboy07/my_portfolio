@@ -21,7 +21,7 @@ const ProjectPage = ()=>{
         return {
           description: elem.description,
           live: elem.live,
-          image: elem.description,
+          image: elem.image,
           sourceCode: elem.sourceCode
     ,name: elem.name}})
       setProjects(arr)})
