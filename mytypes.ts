@@ -1,19 +1,10 @@
 export interface project{
+projectName: string;
+projectDescription: string;
+sourceCode: string;
+live: string;
+projectImage: string;}
 
-    name: string;
-    description: string;
-    image: string;
-    live: string;
-    sourceCode:string;
-
-}
-
-export interface doc extends Object{
-
-data():project
-
-}
-export interface snapShot {
-
-    docs: doc[]
+export interface tech{
+imageLink: string
 }
