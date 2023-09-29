@@ -47,7 +47,7 @@ const AboutPage = ()=>{
             <div className="basis-1/2">
               <div ref={image} className={"w-48 h-56 rounded-full border-2 border-white mx-auto mb-10 lg:w-80 aspect-1 lg:h-auto mx-auto"}>
 
-<img src="/zhawolfu.jpg" alt="my-avatar" className={"w-full h-full object-cover rounded-full relative left-6  grayscale"}/>
+<img src="/tbabs.png" alt="my-avatar" className={"w-full h-full object-cover rounded-full relative left-6  grayscale"}/>
 </div>
               </div>
 

@@ -10,9 +10,16 @@ import Footer from "./components/Footer";
 import { project, tech } from "../mytypes";
 import ProjectPage from "./pages/ProjectsPage";
 import { useReducer } from "react";
+import LoadingComponent from "./components/LoadinComponent";
 /*iimport { BrowserRouter,Routes,Route } from '../node_modules/react-router-dom/dist/index';
 
  */
+let loaderArr:string[] = []
+
+for(let i = 0; i< 3; i++){
+loaderArr.push("")
+}
+
 const ACTIONS = {
   SET_PROJECTS: "SET_PROJECTS",
   SET_TECHS: "SET_TECHS",
@@ -71,7 +78,7 @@ const App = () => {
     );
   }
 
-  return storage.projects.length > 0 && storage.techs.length > 0 ? (
+ return (storage.projects.length > 0 && storage.techs.length > 0 )? (
     <>
       <main className={""}>
         <WelcomePage />
@@ -89,7 +96,7 @@ const App = () => {
       </main>
     </>
   ) : (
-    <div>loading...</div>
+  loaderArr.map((item:string, idx:number)=>{ if(item != null) {return <LoadingComponent key={idx}/>}})
   );
 };
 
