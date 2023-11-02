@@ -9,15 +9,15 @@ import ContactPage from "./pages/ContactPage";
 import Footer from "./components/Footer";
 import { project, tech } from "../mytypes";
 import ProjectPage from "./pages/ProjectsPage";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import LoadingComponent from "./components/LoadinComponent";
 /*iimport { BrowserRouter,Routes,Route } from '../node_modules/react-router-dom/dist/index';
 
  */
-let loaderArr:string[] = []
+let loaderArr: string[] = [];
 
-for(let i = 0; i< 3; i++){
-loaderArr.push("")
+for (let i = 0; i < 3; i++) {
+  loaderArr.push("");
 }
 
 const ACTIONS = {
@@ -68,17 +68,17 @@ const App = () => {
     initialStorage,
     () => initialStorage
   );
-
-  getAndDispatch("techs", ACTIONS.SET_TECHS);
-  getAndDispatch("projects", ACTIONS.SET_PROJECTS);
-
+  useEffect(() => {
+    getAndDispatch("techs", ACTIONS.SET_TECHS);
+    getAndDispatch("projects", ACTIONS.SET_PROJECTS);
+  }, []);
   function getAndDispatch(route: string, type: string) {
     getDocs(`${apiUrl}/${route}`).then((res) =>
       dispatch({ type, payload: res })
     );
   }
 
- return (storage.projects.length > 0 && storage.techs.length > 0 )? (
+  return storage.projects.length > 0 && storage.techs.length > 0 ? (
     <>
       <main className={""}>
         <WelcomePage />
@@ -96,7 +96,13 @@ const App = () => {
       </main>
     </>
   ) : (
-  loaderArr.map((item:string, idx:number)=>{ if(item != null) {return <LoadingComponent key={idx}/>}})
+    <div className="pt-5">
+      {loaderArr.map((item: string, idx: number) => {
+        if (item != null) {
+          return <LoadingComponent key={idx} />;
+        }
+      })}
+    </div>
   );
 };
 
